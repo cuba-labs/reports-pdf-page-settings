@@ -1,6 +1,6 @@
 # How to tune PDF page settings for HTML -> PDF reports
 
-## Basic priciples of HTML to PDF formatting in YARG / CUBA reporting:
+## Basic principles of HTML to PDF formatting in YARG / CUBA reporting:
 
 - You can use HTML/CSS features of https://github.com/flyingsaucerproject/flyingsaucer library
 - You can control page size / page headers / footers using special CSS rules and properties
