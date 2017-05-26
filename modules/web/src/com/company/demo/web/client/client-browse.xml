@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.demo.web.client.ClientBrowse"
+        focusComponent="clientsTable"
+        lookupComponent="clientsTable"
+        messagesPack="com.company.demo.web.client">
+    <dsContext>
+        <groupDatasource id="clientsDs"
+                         class="com.company.demo.entity.Client"
+                         view="_local">
+            <query>
+                <![CDATA[select e from demo$Client e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="clientsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="clientsTable"
+                datasource="clientsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="clientsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="title"/>
+                <column id="summary"/>
+            </columns>
+            <rows datasource="clientsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="clientsTable.create"/>
+                <button id="editBtn"
+                        action="clientsTable.edit"/>
+                <button id="removeBtn"
+                        action="clientsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
