@@ -3,16 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
-    <context-param>
-        <description>Web resources version for correct caching in browser</description>
-        <param-name>webResourcesTs</param-name>
-        <param-value>${webResourcesTs}</param-value>
-    </context-param>
     <!-- Application properties config files -->
     <context-param>
         <param-name>appPropertiesConfig</param-name>
-        <param-value>classpath:cuba-web-app.properties
-            classpath:com/company/demo/web-app.properties
+        <param-value>classpath:com/company/demo/web-app.properties
             /WEB-INF/local.app.properties
             "file:${catalina.base}/conf/app/local.app.properties"</param-value>
     </context-param>
